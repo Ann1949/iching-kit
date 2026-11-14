@@ -1,0 +1,53 @@
+{
+  "name": "iching-kit",
+  "version": "0.1.0",
+  "description": "Zero-dependency I Ching (Yijing) engine for JavaScript and TypeScript: cast a hexagram with coins, get the changing lines, and know which classical texts to read. By I Ching Oracle (東方神諭).",
+  "keywords": [
+    "iching",
+    "i-ching",
+    "yijing",
+    "book-of-changes",
+    "hexagram",
+    "divination",
+    "oracle",
+    "coin-toss",
+    "zhu-xi",
+    "typescript"
+  ],
+  "license": "MIT",
+  "author": "I Ching Oracle (https://theichingoracle.com)",
+  "homepage": "https://theichingoracle.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ann1949/iching-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ann1949/iching-kit/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
